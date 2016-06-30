@@ -1,0 +1,17 @@
+apply plugin: "java"
+apply plugin: "application"
+mainClassName = "hello.HelloKafkaProducer"
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+jar {
+    baseName = 'hellokafka'
+    version =  '0.1.0'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
+}
+
+
