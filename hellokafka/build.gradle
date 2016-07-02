@@ -5,6 +5,15 @@ mainClassName = "hello.HelloKafkaProducer"
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  // https://mvnrepository.com/artifact/org.apache.kafka/kafka_2.10
+  compile group: 'org.apache.kafka', name: 'kafka_2.10', version: '0.10.0.0'
+}
+
 jar {
     baseName = 'hellokafka'
     version =  '0.1.0'
@@ -14,4 +23,7 @@ task wrapper(type: Wrapper) {
     gradleVersion = '2.3'
 }
 
-
+task execute(type: JavaExec) {
+  main = mainClass
+  classpath = sourceSets.main.runtimeClasspath
+}
