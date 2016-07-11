@@ -23,7 +23,7 @@ task wrapper(type: Wrapper) {
     gradleVersion = '2.3'
 }
 
-task execute(type: JavaExec) {
-  main = mainClass
-  classpath = sourceSets.main.runtimeClasspath
-}
+//task execute(type: JavaExec) {
+//  main = mainClass
+//  classpath = sourceSets.main.runtimeClasspath
+//}
